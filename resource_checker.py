@@ -76,6 +76,10 @@ def cli():
 def check(directory):
 	'''
 	Check data integrity. Only photos, audios, and videos are supported.
+
+	ARGUMENTS:
+
+	* DIRECTORY: path of unzipped Day One data
 	'''
 	asset_check(directory, 'photo', 'type')
 	asset_check(directory, 'audio', 'format')

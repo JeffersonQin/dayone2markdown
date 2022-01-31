@@ -4,6 +4,7 @@
 	- [Check Integrity](#check-integrity)
 		- [Special Cases for Photo Extension Name](#special-cases-for-photo-extension-name)
 		- [Audio Extension Name](#audio-extension-name)
+- [Usage](#usage)
 - [Known Issues](#known-issues)
 
 # Introduction
@@ -25,10 +26,14 @@ Wait for couple of seconds (hours, I hate the iCloud service in mainland China),
 Note that, the data you dumped might be damaged, and some files may be missing. To continue, it is recommended to use the tool provided to check data integrity.
 
 ```
-$ python3 .\resource_checker.py check --help                                            
+$ python3 .\resource_checker.py check --help     
 Usage: resource_checker.py check [OPTIONS] DIRECTORY
 
   Check data integrity. Only photos, audios, and videos are supported.
+
+  ARGUMENTS:
+
+  * DIRECTORY: path of unzipped Day One data
 
 Options:
   --help  Show this message and exit.
@@ -93,6 +98,24 @@ Most audios have `m4a` as extension name. However, the dumped json data might ha
 
 Feel free to change it into `m4a`. The only rule is that you should keep the extension name of audio files and `format` field value the same.
 
+# Usage
+
+```
+$ python3 .\converter.py convert --help
+Usage: converter.py convert [OPTIONS] DIRECTORY
+
+  Convert dumped data to markdown files        
+
+  ARGUMENTS:
+
+  * DIRECTORY: path of unzipped Day One data   
+
+Options:
+  --help  Show this message and exit.
+```
+
+The converted files are located in the `./markdown` folder relative to Day One data folder.
+
 # Known Issues
 
 Following formats are not supported, 'cause I am not subscribing the app any more. If any one is interested in supporting those formats, feel free to send me dumped data, and I will take a look on them.
@@ -101,3 +124,5 @@ Following formats are not supported, 'cause I am not subscribing the app any mor
 * File
 * Scan
 * Template
+
+Some text attributes cannot be retained, for example <font color="red">red</font> text, because they are not exported explicitly in dumped data, neither in `text` field, nor in `richText` field.
