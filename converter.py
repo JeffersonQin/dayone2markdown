@@ -90,7 +90,7 @@ def convert_diary(directory: str, diary_name: str, entries: list):
 			local_time = utc.astimezone(to_zone)
 
 			# write contents
-			markdown_dir = os.path.join(directory, './markdown/', f'{local_time.strftime("%Y%m%d")} - {diary_name}.md')
+			markdown_dir = os.path.join(directory, './markdown/', f'{local_time.strftime("%Y%m%d %H-%M-%S")} - {diary_name}.md')
 			with open(markdown_dir, 'w+', encoding='utf-8') as f:
 				f.write(content)
 			csuccess('Conversion Success:', markdown_dir)
