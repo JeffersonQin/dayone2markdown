@@ -1,4 +1,5 @@
 - [Introduction](#introduction)
+- [Features](#features)
 - [Before Start](#before-start)
 	- [Export data from Day One](#export-data-from-day-one)
 	- [Check Integrity](#check-integrity)
@@ -6,10 +7,54 @@
 		- [Audio Extension Name](#audio-extension-name)
 - [Usage](#usage)
 - [Known Issues](#known-issues)
+- [TODO](#todo)
 
 # Introduction
 
 A command line tool that can convert Day One data into markdown files.
+
+# Features
+
+Following metadata are supported:
+
+* Creation Date
+* Modification Date
+* Device Model
+* Operating System
+* Day One UUID
+* Time Zone
+* Starred
+* All Day
+* Pinned
+* Device
+* Hashtags
+* Activity
+* Walking Steps
+
+Example:
+
+<style>.github-badge {display: inline-block;border-radius: 4px;text-shadow: none;font-size: 12px;color: #fff;line-height: 13px;background-color: #abbac3;}.github-badge .badge-subject {display: inline-block;background-color: #4d4d4d;padding: 4px 4px 4px 6px;border-top-left-radius: 4px;border-bottom-left-radius: 4px;}.github-badge .badge-value {display: inline-block;padding: 4px 6px 4px 4px;border-top-right-radius: 4px;border-bottom-right-radius: 4px;}</style>
+<div class="github-badge" height="20px" style="background-color: #F03A17">
+  <span class="badge-subject">📅 Create</span><span class="badge-value">2018/11/23 21:58:03</span>
+</div> <div class="github-badge" height="20px" style="background-color: #F03A17">
+  <span class="badge-subject">📅 Modify</span><span class="badge-value">2018/11/29 00:11:54</span>
+</div> <div class="github-badge" height="20px" style="background-color: #0794BD">
+  <span class="badge-subject">📱 Device Model</span><span class="badge-value">iPhone 7 Plus</span>
+</div> <div class="github-badge" height="20px" style="background-color: #FFC83D">
+  <span class="badge-subject">💿 OS</span><span class="badge-value">iOS 12.0</span>
+</div> <div class="github-badge" height="20px" style="background-color: #886CE4">
+  <span class="badge-subject">🆔 Day One UUID</span><span class="badge-value">7F466D1517E54DF1914D3118FDEBCEE4</span>
+</div> <div class="github-badge" height="20px" style="background-color: #5BCFF0">
+  <span class="badge-subject">🌐 Time Zone</span><span class="badge-value">Asia/Shanghai</span>
+</div> <div class="github-badge" height="20px" style="background-color: #F95F5A">
+  <span class="badge-subject">⌨ Device</span><span class="badge-value">Jefferson Qin's iPhone</span>
+</div> <div class="github-badge" height="20px" style="background-color: #34D058">
+  <span class="badge-subject">⛳ Activity</span><span class="badge-value">Walking</span>
+</div> <div class="github-badge" height="20px" style="background-color: #BF8EF3">
+  <span class="badge-subject">🚶‍♂️ Walking</span><span class="badge-value">7480</span>
+</div>
+
+These are implemented through css and html tags.
 
 # Before Start
 
@@ -126,3 +171,8 @@ Following formats are not supported, 'cause I am not subscribing the app any mor
 * Template
 
 Some text attributes cannot be retained, for example <font color="red">red</font> text, because they are not exported explicitly in dumped data, neither in `text` field, nor in `richText` field.
+
+# TODO
+
+- [ ] Location
+- [ ] Weather
